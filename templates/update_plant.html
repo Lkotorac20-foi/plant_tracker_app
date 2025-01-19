@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ažuriraj biljku</title>
+</head>
+<body>
+    <h1>Ažuriraj biljku</h1>
+    <form method="POST">
+        <label for="name">Ime biljke:</label><br>
+        <input type="text" id="name" name="name" value="{{ plant[1] }}" required><br><br>
+
+        <label for="species">Vrsta:</label><br>
+        <input type="text" id="species" name="species" value="{{ plant[2] }}" required><br><br>
+
+        <label for="planting_date">Datum sadnje:</label><br>
+        <input type="date" id="planting_date" name="planting_date" value="{{ plant[3] }}" required><br><br>
+
+        <label for="description">Opis:</label><br>
+        <textarea id="description" name="description" required>{{ plant[4] }}</textarea><br><br>
+
+        <button type="submit">Spremi promjene</button>
+    </form>
+    <a href="/plants_view">Povratak na popis biljaka</a>
+</body>
+</html>

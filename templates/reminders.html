@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsjetnici za biljke</title>
+</head>
+<body>
+    <h1>Podsjetnici za održavanje biljaka</h1>
+    <a href="/plants_view">Povratak na popis biljaka</a>
+    <table border="1" style="width:100%; margin-top:20px;">
+        <tr>
+            <th>ID</th>
+            <th>Biljka</th>
+            <th>Datum podsjetnika</th>
+            <th>Poruka</th>
+            <th>Završeno</th>
+        </tr>
+        {% for reminder in reminders %}
+        <tr>
+            <td>{{ reminder[0] }}</td>
+            <td>{{ reminder[1] }}</td>
+            <td>{{ reminder[2] }}</td>
+            <td>{{ reminder[3] }}</td>
+            <td>{{ 'Da' if reminder[4] else 'Ne' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
