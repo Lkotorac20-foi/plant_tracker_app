@@ -1,0 +1,8 @@
+# Ignoriranje privremenih i osobnih datoteka
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.idea/
+.vscode/
